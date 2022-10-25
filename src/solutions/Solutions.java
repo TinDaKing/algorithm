@@ -21,7 +21,7 @@ public class Solutions {
 	}
 
 	// task 2
-	public int romanNumber(String n) {
+	public int romanNumber(String n) { // time complex without check valid is O(n)
 		if (!isValidRomanNumber(n))
 			return -1;
 
@@ -100,7 +100,7 @@ public class Solutions {
 	}
 
 	// task 4
-	public int[] sortAlgorithm(int[] arr) {
+	public int[] sortAlgorithm(int[] arr) { // time complex O(n)
 		int[] sortedArr = new int[arr.length];
 		int low = 0, high = arr.length - 1;
 		int midlow = low;
