@@ -21,7 +21,7 @@ public class Mainday8 {
 		// task 4
 		int[] arr = { 1, 2, 2, 0, 0, 1, 2, 2, 1 };
 		int[] sortedArr = solve.sortAlgorithm(arr);
-		System.out.println(solve.isSortedArray(sortedArr)); // TDD
+		// System.out.println(solve.isSortedArray(sortedArr)); // TDD
 		solve.printArray(sortedArr);
 	}
 
