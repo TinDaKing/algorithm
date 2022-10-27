@@ -9,7 +9,7 @@ public class Mainday8 {
 		Solutions solve = new Solutions();
 
 		// task 1
-		System.out.println(solve.sqrtFunc(10)); 
+		System.out.println(solve.sqrtFunc(2777)); 
 		
 		// task 2
 		System.out.println(solve.romanNumber("CMLXXXVII"));
