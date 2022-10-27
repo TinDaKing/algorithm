@@ -19,9 +19,6 @@ public class Solutions {
 
     // task 2
     public int romanNumber(String n) { // time complex is O(n)
-//        if (!isValidRomanNumber(n))
-//            return -1;
-
         int finalRNum = 0;
         for (int i = 0; i < n.length(); i++) {
             int cur = singleBasicRomanNumber(n.charAt(i));
@@ -39,17 +36,6 @@ public class Solutions {
         }
         return finalRNum;
     }
-
-//    private boolean isValidRomanNumber(String n) {
-//        for (int i = 0; i < n.length(); i++) {
-//            if (n.charAt(i) != 'I' && n.charAt(i) != 'V' && n.charAt(i) != 'X' && n.charAt(i) != 'L'
-//                    && n.charAt(i) != 'C' && n.charAt(i) != 'D' && n.charAt(i) != 'M') {
-//                System.out.println("Input for roman number contains invalid character.");
-//                throw new ArithmeticException("Input not valid!??");
-//            }
-//        }
-//        return true;
-//    }
 
     private int singleBasicRomanNumber(char n) {
         switch (n) {
