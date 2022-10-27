@@ -86,7 +86,7 @@ public class Solutions {
     }
 
     // task 4
-    public int[] sortAlgorithm(int[] arr) { // time complex O(n)
+    public int[] sortAlgorithm(int[] arr) { // time complex O(n), space complex O(n)
         int[] sortedArr = new int[arr.length];
         int low = 0, high = arr.length - 1;
         int midlow = low;
