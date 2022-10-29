@@ -65,24 +65,21 @@ public class Solutions {
     }
 
     // task 3
-    public String LongestSameString(String[] strs) { // time complexity O(xn) , x equal to length of the first string
-        String result = "";
-        char temp = strs[0].charAt(0);
-        int cur = 0;
+    public String LongestSameString(String[] strs) { // time complexity O(n)
 
-        while (cur < strs[0].length()) {
-            temp = strs[0].charAt(cur);
+        int max = strs[0].length(); // 6
+        int count = 0;
 
-            for (int i = 1; i < strs.length; i++) {
-                if (strs[i].charAt(cur) != temp) {
-                    return result;
-                }
+        for (int i = 1; i < strs.length; i++) {
+            count = 0;
+            while (count < strs[i].length() && count < max && 
+                    strs[i].charAt(count) == strs[0].charAt(count)) {
+                ++count;
             }
-            result += temp;
-            ++cur;
+            max = count;
         }
 
-        return result;
+        return strs[0].substring(0, max);
     }
 
     // task 4
