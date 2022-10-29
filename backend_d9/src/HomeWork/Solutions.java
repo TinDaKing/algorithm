@@ -21,6 +21,12 @@ public class Solutions {
 		return fiN;
 	}
 
+	public int fibonacciRecursion(int n, int a, int b) { // time complex O(n); a, b is fibo(0) and fibo(1)
+		if (n == 0)
+			return a;
+		return fibonacciRecursion(n - 1, b, a + b);
+	}
+
 	public String LongestSameString(String[] strs) { // time complexity O(n*m), m is length of strs[0]
 
 		int max = strs[0].length();

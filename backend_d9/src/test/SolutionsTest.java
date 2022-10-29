@@ -51,6 +51,30 @@ class SolutionsTest {
 	}
 
 	@Test
+	public void fibonacciRecursion() {
+		int expectedResult = 55;
+		Solutions solve = new Solutions();
+		int actualResult = solve.fibonacciRecursion(10, 0, 1);
+		assertEquals(expectedResult, actualResult);
+	}
+
+	@Test
+	public void fibonacciRecursion2() {
+		int expectedResult = 987;
+		Solutions solve = new Solutions();
+		int actualResult = solve.fibonacciRecursion(16, 0, 1);
+		assertEquals(expectedResult, actualResult);
+	}
+
+	@Test
+	public void fibonacciRecursion3() {
+		int expectedResult = 39088169;
+		Solutions solve = new Solutions();
+		int actualResult = solve.fibonacciRecursion(38, 0, 1);
+		assertEquals(expectedResult, actualResult);
+	}
+
+	@Test
 	public void LongestSameString() {
 		String expectedResult = "significant";
 		Solutions solve = new Solutions();

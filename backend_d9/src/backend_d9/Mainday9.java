@@ -11,6 +11,7 @@ public class Mainday9 {
 		// task 1
 		int n = 45;
 		System.out.println("Fibonacci of " + n + " is: " + solve.fibonacci(45));
+		System.out.println("Fibonacci use Recursion of " + n + " is: " + solve.fibonacciRecursion(45, 0, 1));
 
 		// task 2
 		String[] strs = { "flower", "flow", "florida", "flight" };
