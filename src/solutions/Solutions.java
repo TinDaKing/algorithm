@@ -19,6 +19,9 @@ public class Solutions {
 
     // task 2
     public int romanNumber(String n) { // time complex is O(n)
+        if (n.length() == 1)
+            return singleBasicRomanNumber(n.charAt(0));
+
         int finalRNum = 0;
         for (int i = 0; i < n.length(); i++) {
             int cur = singleBasicRomanNumber(n.charAt(i));
@@ -67,12 +70,12 @@ public class Solutions {
     // task 3
     public String LongestSameString(String[] strs) { // time complexity O(n)
 
-        int max = strs[0].length(); // 6
+        int max = strs[0].length();
         int count = 0;
 
         for (int i = 1; i < strs.length; i++) {
             count = 0;
-            while (count < strs[i].length() && count < max && 
+            while (count < strs[i].length() && count < max &&
                     strs[i].charAt(count) == strs[0].charAt(count)) {
                 ++count;
             }
@@ -96,11 +99,12 @@ public class Solutions {
             } else if (element == 1) { // case = 1
                 sortedArr[midlow] = element;
                 ++midlow;
-            } else if (low != midlow) { // case = 0
-                sortedArr[low] = 0;
+
+            } else { // case = 0
                 sortedArr[midlow] = 1;
-                ++low;
+                sortedArr[low] = 0;
                 ++midlow;
+                ++low;
             }
         }
         return sortedArr;
